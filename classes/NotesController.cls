@@ -7,6 +7,8 @@ public class NotesController {
     }
      public static void method2(){
         Contact contactObj = [Select Id,Name from Contact limit 1];
+        contactObj.Email = 'test@test.com';
+         update contactObj;
         System.debug('contactObj'+contactObj);
     }
 
